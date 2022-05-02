@@ -20,7 +20,7 @@ export class ServerService {
     }*/
 
     // get a list of servers
-    private readonly apiUrl = 'any';
+    private readonly apiUrl = 'http://localhost:8080';
     servers$ = this.http.get<CustomResponse>(`${this.apiUrl}/server/list`)
     .pipe(
         tap(console.log),
